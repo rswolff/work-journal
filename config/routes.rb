@@ -1,4 +1,6 @@
 WorkJournal::Application.routes.draw do
+  resources :work_items
+
   get "pages/home"
 
   root :to => 'pages#home'

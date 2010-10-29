@@ -1,0 +1,37 @@
+/* base styles go here */
+body { background-color: #F6F6F6; font-size: 18px; }
+
+/* forms */
+label { font-size: 18px -2; }
+
+hr { margin-bottom: 15px; }
+
+input[type=text], input[type=password], input[type=file], select, textarea { font-size: 18px; padding: 4px; }
+
+input[type=text].short, input[type=password].short { width: 100px; }
+
+input[type=text].medium, input[type=password].medium { width: 250px; }
+
+input[type=text].long, input[type=password].long { width: 450px; }
+
+input[type=submit] { font-size: 18px; }
+
+textarea { font-family: helvetica, arial, "sans serif"; }
+
+/* nav */
+ul#nav { padding-left: 0px; }
+
+ul#nav li { display: inline; list-style-type: none; padding-right: 20px; }
+
+.button { text-decoration: none; font-size: 16px; }
+
+/* fancy button styles thanks to: http://naioo.com/blog/css3-buttons-without-any-images/ */
+button, .button { -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4); -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4); color: rgba(0, 0, 0, 0.9); text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.5); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#b9b9b9)); background: -moz-linear-gradient(top, white, #b9b9b9); padding: 5px 5px 5px 5px; }
+
+button:hover, .button:hover { background: #f0f0f0; }
+
+button:active, button:focus, .button:active, .button:focus { background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(white), to(#b9b9b9)); background: -moz-linear-gradient(bottom, white, #b9b9b9); }
+
+button:disabled { color: rgba(0, 0, 0, 0.4); text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5); background: #dcdcdc; }
+
+/* appy styles go here */

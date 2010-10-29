@@ -1,0 +1,12 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), work_items_path
+  = link_to t('edit'), edit_work_item_path(@work_item)
+
+%dl
+  %dt= WorkItem.human_attribute_name :date
+  %dd= @work_item.date
+  %dt= WorkItem.human_attribute_name :title
+  %dd= @work_item.title
+  %dt= WorkItem.human_attribute_name :note
+  %dd= @work_item.note
