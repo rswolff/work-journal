@@ -44,7 +44,7 @@ class WorkItemsController < ApplicationController
 
     respond_to do |format|
       if @work_item.save
-        format.html { redirect_to(@work_item, :notice => 'Work item was successfully created.') }
+        format.html { redirect_to(todays_work_items_path, :notice => 'Work item was successfully created.') }
         format.xml  { render :xml => @work_item, :status => :created, :location => @work_item }
       else
         format.html { render :action => "new" }
@@ -76,8 +76,13 @@ class WorkItemsController < ApplicationController
     @work_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to(work_items_url) }
+      format.html { redirect_to(todays_work_items_path) }
       format.xml  { head :ok }
     end
+  end
+  
+  def today
+    @work_item = WorkItem.new
+    @work_items  = WorkItem.today
   end
 end

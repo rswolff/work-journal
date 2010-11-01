@@ -7,6 +7,7 @@ en:
   show: show
   destroy: destroy
   actions: actions
+  add: add
   are_you_sure: are you sure?
   work_items:
     index:

@@ -1,3 +1,11 @@
-%h1= t '.title'
-%p= link_to t('back'), work_items_path
+= content_for :javascripts do
+  :javascript
+    $(function(){
+    
+      $('#togglenotes').click(function(){
+        $('#notes').toggle();
+        return false;
+      })
+    })
+    
 = render 'form'

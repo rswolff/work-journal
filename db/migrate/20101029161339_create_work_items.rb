@@ -2,7 +2,7 @@ class CreateWorkItems < ActiveRecord::Migration
   def self.up
     create_table :work_items do |t|
       t.date :date
-      t.string :title
+      t.text :title
       t.text :note
 
       t.timestamps

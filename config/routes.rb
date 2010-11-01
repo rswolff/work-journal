@@ -1,9 +1,11 @@
 WorkJournal::Application.routes.draw do
+  match 'work_items/today' => 'work_items#today', :as => "todays_work_items"
   resources :work_items
+
 
   get "pages/home"
 
-  root :to => 'pages#home'
+  root :to => 'work_items#today'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

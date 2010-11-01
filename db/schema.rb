@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20101029161339) do
 
   create_table "work_items", :force => true do |t|
     t.date     "date"
-    t.string   "title"
+    t.text     "title"
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"

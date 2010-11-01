@@ -1,3 +1,14 @@
+= content_for :javascripts do
+  :javascript
+    $(function(){
+    
+      $('#togglenotes').click(function(){
+        $('#notes').toggle();
+        return false;
+      })
+    })
+
+
 = form_for(@work_item) do |f|
   - if @work_item.errors.any?
     #errorExplanation
@@ -24,3 +35,11 @@
 
   .actions
     = f.submit "add"
+
+%h3
+  Today's Tasks
+%ol
+- @work_items.each do |work_item|
+  %li
+    = work_item.title
+    = link_to 'delete', work_item, :confirm => t('are_you_sure'), :method => :delete
